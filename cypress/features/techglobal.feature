@@ -1,11 +1,13 @@
+@Regression @HtmlElements
 Feature: Interaction with TechGlobal HtmlElements page
 
-  Background: 
+  Background:
     Given user navigates to "https://techglobal-training.com/frontend/"
     When user clicks on the "Html Elements" card
     Then user should see the "Html Elements" page heading
     Then the URL should contain "elements"
 
+  @Smoke
   Scenario: Validate HTML elements card, Register and Sign in Buttons
     When user clicks on the "Register" button
     Then the text under it should be "You clicked on “Register”"
@@ -18,6 +20,7 @@ Feature: Interaction with TechGlobal HtmlElements page
     Then "Apple" should be the selected option in the first dropdown
     And "Microsoft" should be the selected option in the second dropdown
 
+  @Smoke
   Scenario: Validate HTML Elements card, Interact with text inputs
     When user enters "test input" to input field "1"
     When user enters "another test input" to input field "2"

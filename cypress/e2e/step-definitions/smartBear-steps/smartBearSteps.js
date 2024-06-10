@@ -1,4 +1,4 @@
-import { Given, When, Then } from '@badeball/cypress-cucumber-preprocessor'
+const { When, Then } = require('@badeball/cypress-cucumber-preprocessor')
 
 const SmartBearWebOrdersPage = require('../../../pages/SmartBearWebOrdersPage')
 
@@ -7,9 +7,11 @@ const SmartBearLoginPage = require('../../../pages/SmartBearLoginPage')
 const smartBearLoginPage = new SmartBearLoginPage()
 const smartBearWebOrdersPage = new SmartBearWebOrdersPage()
 
-Given(/^user is on "([^"]*)"$/, (url) => {
+/*
+Given(/^user is on "([^"]*)"$/, (url) => {  //in common steps
   cy.visit(url)
-})
+}) 
+  */
 
 When(/^user enters username as "([^"]*)"$/, (username) => {
   smartBearLoginPage.getUserName().type(username)

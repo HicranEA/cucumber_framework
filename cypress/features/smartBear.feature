@@ -1,7 +1,7 @@
 Feature: SmartBear Validation
 
 Background: Background:
-    Given user is on "http://secure.smartbearsoftware.com/samples/testcomplete12/WebOrders/login.aspx"
+    Given user navigates to "http://secure.smartbearsoftware.com/samples/testcomplete12/WebOrders/login.aspx"
   
   Scenario: Validate invalid login attempt
     When user enters username as "abcd"
