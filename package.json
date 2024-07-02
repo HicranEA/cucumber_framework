@@ -8,7 +8,9 @@
     "test:regression": "cypress run --env tags=@Regression ; node reports.js",
     "test:smoke": "cypress run --env tags=@Smoke ; node reports.js",
     "test:multiple": "cypress run --env tags=\"@Smoke or @Northwestern\" ; node reports.js",
-    "test:ignore": "cypress run --env tags=\"@Regression and not @HtmlElements\" ; node reports.js"
+    "test:ignore": "cypress run --env tags=\"@Regression and not @HtmlElements\" ; node reports.js",
+    "test:smoke:prettier": "npx cypress run --env tags=@Regression ; node reports.js",
+    "test:regression:prettier": "npx cypress run --env tags=@Regression ; node reports.js"
   },
   "keywords": [],
   "author": "",
@@ -27,6 +29,7 @@
     "prettier": "^3.3.0"
   },
   "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
     "stepDefinitions": "cypress/e2e/step-definitions/**/*.js",
     "html": {
       "enabled": true,
